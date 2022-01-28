@@ -16,7 +16,7 @@ class LastChangedElement extends HTMLElement {
             case diff < this.hour:
                 return Math.round(diff / this.minute) + 'm';
             case diff < this.day:
-                return Math.round(diff / this.hour) + 'h';
+                return Math.round(diff / this.hour) + 'h ' + Math.round(diff % this.minute) + 'm';
             case diff < this.month:
                 return Math.round(diff / this.day) + 'd';
             case diff < this.year:
